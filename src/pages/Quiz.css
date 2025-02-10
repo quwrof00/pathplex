@@ -1,0 +1,15 @@
+.quiz-container {
+    min-height: 100vh;
+  }
+  
+  .options-container {
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .options-container::-webkit-scrollbar {
+    display: none;
+  }
+  
