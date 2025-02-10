@@ -93,10 +93,10 @@ export default function Quiz() {
               </Button>
             </div>
 
-            {/* Debug: Display answers array */}
+            {/* Debug: Display answers array
             <div className="mt-4 text-center text-gray-800 dark:text-white text-sm sm:text-base">
               Selected Values: {JSON.stringify(averagedAnswers)}
-            </div>
+            </div> */}
           </motion.div>
         </AnimatePresence>
       </div>

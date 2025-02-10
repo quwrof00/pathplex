@@ -26,6 +26,7 @@ export default function Header() {
             className="bg-black/80 border-r border-gray-600 shadow-lg p-6"
           >
             <nav className="flex flex-col gap-5 text-lg font-medium mt-4">
+              
               <Link to="/" className="hover:text-yellow-400 transition text-white">
                 Home
               </Link>
@@ -44,8 +45,10 @@ export default function Header() {
       </div>
 
       {/* Center Section - Desktop Navigation */}
-      <nav className="hidden sm:flex flex-1 justify-center gap-6 md:gap-8 text-[16px] font-medium">
-        <Link to="/" className="hover:text-yellow-400 transition text-white">
+      <nav className="hidden sm:flex flex-1 items-center justify-between gap-6 md:gap-8 text-[16px] font-medium">
+      <img className="h-10" src="https://cdn3.iconfinder.com/data/icons/smart-home-set/132/Icon_stairs-256.png" alt="" />
+      <div className="flex items-center justify-center gap-8">
+      <Link to="/" className="hover:text-yellow-400 transition text-white">
           Home
         </Link>
         <Link to='/quiz' className="hover:text-yellow-400 transition text-white">
@@ -57,12 +60,11 @@ export default function Header() {
         <Link to='/about' className="hover:text-yellow-400 transition text-white">
           About Us
         </Link>
-      </nav>
-
-      {/* Right Section - Theme Toggle */}
-      <div className="flex-1 flex justify-end">
-        <ThemeToggle />
+        
       </div>
+      <ThemeToggle />
+        
+      </nav>
     </motion.header>
   );
 }

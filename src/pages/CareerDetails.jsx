@@ -16,14 +16,14 @@ export default function CareerDetails() {
 
   return (
     <motion.div
-      className="relative min-h-screen flex flex-col bg-background text-foreground pt-24 px-6"
+      className="relative min-h-screen flex flex-col bg-gradient-to-b from-blue-100 to-blue-200 dark:from-gray-800 dark:to-gray-900 text-foreground pt-24 px-6"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="grid grid-cols-1 sm:grid-cols-12 gap-6 mt-6">
+      <div className="grid grid-cols-1 sm:grid-cols-12 gap-6 mt-6 ">
         {/* Left Sidebar - Navigation */}
-        <Card className="hidden sm:block sm:col-span-2 p-4 bg-white/10 dark:bg-black/20">
+        <Card className="hidden sm:block sm:col-span-2 p-4 bg-white dark:bg-black/20 flex flex-cols items-center justify-center">
           <CardContent>
             <Button variant="secondary" asChild>
               <Link to="/careers">🔙 Back to Careers</Link>
@@ -42,10 +42,10 @@ export default function CareerDetails() {
         </Card>
 
         {/* Main Content - Career Details */}
-        <Card className="sm:col-span-7 p-6 shadow-xl backdrop-blur-lg bg-white/20 dark:bg-black/30">
+        <Card className="sm:col-span-7 p-6 shadow-xl backdrop-blur-lg bg-white dark:bg-black/30">
           <CardContent>
             {/* Header: Image beside Career Title */}
-            <div className="flex items-center gap-3 bg-blue-600 dark:bg-gray-600 text-white rounded p-2">
+            <div className="flex items-center gap-3 bg-black dark:bg-gray-600 text-white rounded p-2">
               <img 
                 src={career.icon} 
                 alt={career.title} 
@@ -119,7 +119,7 @@ export default function CareerDetails() {
         </Card>
 
         {/* Right Sidebar - Quick Facts & Resources */}
-        <Card className="hidden sm:block sm:col-span-3 p-4 bg-white/10 dark:bg-black/20">
+        <Card className="hidden sm:block sm:col-span-3 p-4 bg-white dark:bg-black/20">
           <CardContent>
             <h2 className="text-lg font-semibold">Quick Facts</h2>
             <ul className="mt-4 space-y-2">

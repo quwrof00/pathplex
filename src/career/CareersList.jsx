@@ -7,7 +7,7 @@ import { careerData } from './careerData';
 export default function CareersList() {
   return (
     <motion.div
-  className="min-h-screen bg-background text-foreground px-4 md:px-8 lg:px-16 py-12 pt-24"
+  className="min-h-screen bg-gradient-to-b from-blue-100 to-blue-200 dark:from-gray-800 dark:to-gray-900 text-foreground  px-4 md:px-8 lg:px-16 py-12 pt-24"
   initial={{ opacity: 0 }}
   animate={{ opacity: 1 }}
   transition={{ duration: 0.5 }}
@@ -24,7 +24,7 @@ export default function CareersList() {
             <CardContent className="p-6 flex flex-col gap-3">
               
               {/* Career Header */}
-              <div className="flex items-center gap-4 bg-blue-600 dark:bg-gray-600 text-white rounded p-2">
+              <div className="flex items-center gap-4 bg-black dark:bg-gray-600 text-white rounded p-2">
                 <img 
                   className="w-12 h-12 object-contain" 
                   src={career.icon} 
