@@ -33,7 +33,7 @@ export default function Header() {
               <Link to="/quiz" className="hover:text-yellow-400 transition text-white">
                 Quiz
               </Link>
-              <Link to="/career" className="hover:text-yellow-400 transition text-white">
+              <Link to="/careers" className="hover:text-yellow-400 transition text-white">
                 Explore
               </Link>
               <Link to="/about" className="hover:text-yellow-400 transition text-white">

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Card, CardContent } from "../components/ui/card";
 import { Link } from "react-router-dom";
 import { careerData } from "../career/careerData";
+import bgvid from "../assets/icons/bgvid.mp4";
 
 export default function Home() {
   return (
@@ -12,14 +13,14 @@ export default function Home() {
       transition={{ duration: 0.5 }}
     >
       {/* Video Background */}
-      <video 
-        autoPlay 
-        loop 
-        muted 
-        playsInline 
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
         className="absolute inset-0 w-full h-full object-cover"
       >
-        <source src="/src/assets/icons/bgvid.mp4" type="video/mp4" />
+        <source src={bgvid} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 

@@ -1,6 +1,16 @@
+import auctionIcon from "../assets/icons/auction.png";
+import barsIcon from "../assets/icons/bars.png";
+import computerIcon from "../assets/icons/computer.png";
+import customerIcon from "../assets/icons/customer.png";
+import editToolsIcon from "../assets/icons/edit-tools.png";
+import healthcareIcon from "../assets/icons/healthcare.png";
+import resourcesIcon from "../assets/icons/resources.png";
+import scienceIcon from "../assets/icons/science.png";
+import settingsIcon from "../assets/icons/settings.png";
+import teacherIcon from "../assets/icons/teacher.png";
 export const careerData = {
     "medical-healthcare": {
-      icon: "/src/assets/icons/healthcare.png",
+      icon: healthcareIcon,
       title: "Medical & Healthcare",
       description: "Careers focused on health and patient care.",
       whatTheyDo: "Diagnose and treat patients, conduct research, and promote public health.",
@@ -29,7 +39,7 @@ export const careerData = {
       ]
     },
     "engineering-technology": {
-        icon: "/src/assets/icons/computer.png",
+        icon: computerIcon,
         title: "Engineering & Technology",
         description: "Careers focused on innovation, design, and problem-solving using science and technology.",
         whatTheyDo: "Develop, test, and improve systems, software, and infrastructure to solve real-world problems.",
@@ -58,7 +68,7 @@ export const careerData = {
         ]
       },
       "science-research": {
-        icon: "/src/assets/icons/science.png",
+        icon: scienceIcon,
         title: "Science & Research",
         description: "Careers focused on discovering new knowledge, solving complex problems, and advancing technology through research.",
         whatTheyDo: "Conduct experiments, analyze data, develop theories, and publish findings to expand scientific understanding.",
@@ -87,7 +97,7 @@ export const careerData = {
         ]
       },
       "finance-business": {
-        icon: "/src/assets/icons/bars.png",
+        icon: barsIcon,
         title: "Finance & Business",
         description: "Careers focused on managing money, investments, and corporate strategy to drive economic success.",
         whatTheyDo: "Analyze financial data, manage investments, optimize business operations, and develop strategies for growth.",
@@ -116,7 +126,7 @@ export const careerData = {
         ]
       },
       "creative-design": {
-        icon: "/src/assets/icons/edit-tools.png",
+        icon: editToolsIcon,
         title: "Creative & Design",
         description: "Careers focused on visual storytelling, user experience, and artistic expression through various media.",
         whatTheyDo: "Design graphics, create digital content, build user-friendly experiences, and bring creative ideas to life.",
@@ -145,7 +155,7 @@ export const careerData = {
         ]
       },
       "education-training": {
-        icon: "/src/assets/icons/teacher.png",
+        icon: teacherIcon,
         title: "Education & Training",
         description: "Careers focused on teaching, mentoring, and developing knowledge and skills in others.",
         whatTheyDo: "Educate students, train professionals, develop learning materials, and guide individuals in their personal and professional growth.",
@@ -174,7 +184,7 @@ export const careerData = {
         ]
       },
       "law-government": {
-        icon: "/src/assets/icons/auction.png",
+        icon: auctionIcon,
         title: "Law & Government",
         description: "Careers focused on legal justice, policymaking, and public service to maintain order and governance.",
         whatTheyDo: "Interpret laws, advocate for clients, enforce regulations, and develop policies for public welfare.",
@@ -203,7 +213,7 @@ export const careerData = {
         ]
       },
       "administration-hr": {
-        icon: "/src/assets/icons/resources.png",
+        icon: resourcesIcon,
         title: "Administration & Human Resources",
         description: "Careers focused on managing operations, hiring talent, and ensuring workplace efficiency.",
         whatTheyDo: "Oversee business operations, recruit employees, manage workplace policies, and support organizational growth.",
@@ -232,7 +242,7 @@ export const careerData = {
         ]
       },
       "social-public-services": {
-        icon: "/src/assets/icons/customer.png",
+        icon: customerIcon,
         title: "Social & Public Services",
         description: "Careers focused on helping communities, advocating for social change, and improving public well-being.",
         whatTheyDo: "Provide support services, advocate for policy changes, assist vulnerable populations, and manage community programs.",
@@ -261,7 +271,7 @@ export const careerData = {
         ]
       },
       "misc-specialized": {
-        icon: "/src/assets/icons/settings.png",
+        icon: settingsIcon,
         title: "Miscellaneous & Specialized Roles",
         description: "Careers that don’t fit into traditional categories but require unique expertise and specialized skills.",
         whatTheyDo: "Work in niche industries, apply specialized knowledge, and innovate in unique fields.",

@@ -5,6 +5,7 @@ import Quiz from "./pages/Quiz";
 import Results from "./pages/Results";
 import CareerDetails from "./pages/CareerDetails";
 import CareersList from "./career/CareersList"; // Assuming you'll create this page
+import About from "./pages/About";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="/results" element={<Results />} />
           <Route path="/careers" element={<CareersList />} />
           <Route path="/careers/:careerSlug" element={<CareerDetails />} />
+          <Route path="/about" element={<About/>}/>
         </Routes>
       </div>
     </Router>

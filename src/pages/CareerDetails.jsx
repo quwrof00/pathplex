@@ -16,7 +16,7 @@ export default function CareerDetails() {
 
   return (
     <motion.div
-      className="relative min-h-screen flex flex-col bg-gradient-to-b from-blue-100 to-blue-200 dark:from-gray-800 dark:to-gray-900 text-foreground pt-24 px-6"
+      className="relative min-h-screen flex flex-col bg-gradient-to-b from-blue-100 to-blue-200 dark:from-gray-800 dark:to-gray-900 text-foreground pt-20 px-6"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
