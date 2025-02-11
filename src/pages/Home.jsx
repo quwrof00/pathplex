@@ -36,7 +36,7 @@ export default function Home() {
                 alt="Ladder Icon"
                 className="w-20 h-20"
               />
-              <h1 className="text-5xl mt-4 font-bold text-white">
+              <h1 className="text-5xl mt-4 font-bold font-Equinox text-white">
                 PathPlex
               </h1>
             </div>

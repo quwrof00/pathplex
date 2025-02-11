@@ -1,49 +1,51 @@
-import { motion } from "framer-motion";
-import { Card, CardContent } from "../components/ui/card";
+import React from "react";
+import { useLocation } from "react-router-dom";
 import { Button } from "../components/ui/button";
 import useQuizStore from "../store/quizStore";
 import { useNavigate } from "react-router-dom";
 
-export default function Results() {
-  const { score, questions, restartQuiz } = useQuizStore();
+
+const Results = () => {
+  const { resetQuiz } = useQuizStore();
+  const { state } = useLocation();
   const navigate = useNavigate();
+  const result = state?.result;
+
+  if (!result) {
+    return <div>No results found.</div>;
+  }
+
+  const handleReset = () => {
+    resetQuiz(); // Resets the quiz store
+    navigate("/"); // Redirects to the Quiz page (adjust the path as needed)
+  };
 
   return (
-    <motion.div
-      className="flex flex-col items-center justify-center min-h-screen p-6 text-center"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      {/* Top Section (1 part) */}
-      <div className="flex-1 flex items-center">
-        <h1 className="text-3xl font-bold text-foreground">Quiz Results</h1>
-      </div>
-
-      {/* Middle Section (3 parts) */}
-      <div className="flex-3 flex items-center justify-center w-full">
-        <Card className="max-w-lg w-full p-6 shadow-lg">
-          <CardContent>
-            <h2 className="text-2xl font-bold text-primary">Your Score</h2>
-            <p className="text-xl my-4 text-muted-foreground">
-              {score} / {questions.length}
-            </p>
-          </CardContent>
-        </Card>
-      </div>
-
-      {/* Bottom Section (1 part) */}
-      <div className="flex-1 flex items-center">
-        <Button 
-          onClick={() => {
-            restartQuiz();
-            navigate("/quiz");
-          }}
-          className="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-all duration-300"
+    <div className="results-page min-h-screen bg-gradient-to-b from-green-100 to-green-200 flex flex-col items-center justify-center p-4">
+      <div className="w-full max-w-md bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+        <h2 className="text-2xl font-bold text-gray-800 dark:text-white text-center mb-4">
+          Quiz Results
+        </h2>
+        {/* Big, bold predicted career */}
+        <h1 className="text-4xl font-extrabold text-green-600">
+          {result.prediction.career}
+        </h1>
+        <p className="text-xl text-gray-700 mt-2">
+          {result.prediction.description}
+        </p>
+        <p className="text-sm text-gray-600 mt-4">
+          <strong>Timestamp:</strong>{" "}
+          {new Date(result.timestamp).toLocaleString()}
+        </p>
+        <Button
+          onClick={handleReset}
+          className="mt-4 bg-blue-500 text-white hover:bg-blue-600"
         >
-          Retry Quiz
+          Reset Quiz
         </Button>
       </div>
-    </motion.div>
+    </div>
   );
-}
+};
+
+export default Results;
